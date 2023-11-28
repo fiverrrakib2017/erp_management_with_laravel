@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('admin/dashboard',function(){
-    return 'this is dashboard';
+    return view('Backend.Admin.Pages.Dashboard.index');
 })->name('admin.dashboard')->middleware('is_admin');
 
 Auth::routes();
